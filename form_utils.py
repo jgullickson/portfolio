@@ -4,6 +4,9 @@ from wtforms.validators import DataRequired, Length, Email
 from email_utils import buildMessage, sendMessageWithSMTPSSL
 import os
 from dotenv import load_dotenv
+
+# APP_ROOT = os.path.join(os.path.dirname(__file__), "..")
+# dotenv_path = os.path.join(APP_ROOT, '.env')
 load_dotenv()
 
 class ContactForm(FlaskForm):
