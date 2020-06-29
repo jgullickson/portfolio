@@ -3,7 +3,9 @@ import os
 from dotenv import load_dotenv
 from email.message import EmailMessage
 
-load_dotenv()
+APP_ROOT = os.path.join(os.path.dirname(__file__), "..")
+dotenv_path = os.path.join(APP_ROOT, '.env')
+load_dotenv(dotenv_path)
 
 # gmail username and app password
 # EMAIL_ADDRESS = os.getenv('EMAIL_ADDRESS')
