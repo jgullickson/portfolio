@@ -5,7 +5,8 @@ from form_utils import ContactForm, handleContactForm
 from flask_wtf.csrf import CSRFProtect
 
 app = Flask(__name__)
-app.secret_key = os.getenv('APP_SECRET_KEY')
+# app.secret_key = os.getenv('APP_SECRET_KEY')
+app.secret_key = os.environ.get('APP_SECRET_KEY')
 
 csrf = CSRFProtect()
 csrf.init_app(app)

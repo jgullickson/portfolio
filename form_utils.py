@@ -14,9 +14,13 @@ class ContactForm(FlaskForm):
     submit = SubmitField()
 
 def handleContactForm(form):
+    # options = {
+    #     'to': os.getenv('DEFAULT_RECIPIENT'),
+    #     'subject': os.getenv('DEFAULT_SUBJECTLINE')
+    # }
     options = {
-        'to': os.getenv('DEFAULT_RECIPIENT'),
-        'subject': os.getenv('DEFAULT_SUBJECTLINE')
+        'to': os.environ.get('DEFAULT_RECIPIENT'),
+        'subject': os.environ.get('DEFAULT_SUBJECTLINE')
     }
     message = buildMessage(form, options)
     sendMessageWithSMTPSSL(message)

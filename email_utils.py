@@ -6,8 +6,10 @@ from email.message import EmailMessage
 load_dotenv()
 
 # gmail username and app password
-EMAIL_ADDRESS = os.getenv('EMAIL_ADDRESS')
-EMAIL_PASSWORD = os.getenv('EMAIL_PASSWORD')
+# EMAIL_ADDRESS = os.getenv('EMAIL_ADDRESS')
+# EMAIL_PASSWORD = os.getenv('EMAIL_PASSWORD')
+EMAIL_ADDRESS = os.environ.get('EMAIL_ADDRESS')
+EMAIL_PASSWORD = os.environ.get('EMAIL_PASSWORD')
 
 # use local debug server for testing
 def smtpDebugServer(msg):
