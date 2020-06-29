@@ -1,7 +1,6 @@
 import os
 from os import path, getcwd
 from flask import Flask, render_template, request, redirect, url_for
-from dev_utils import dev_dirWatcher
 from form_utils import ContactForm, handleContactForm
 from flask_wtf.csrf import CSRFProtect
 
