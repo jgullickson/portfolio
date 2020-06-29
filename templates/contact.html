@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class='container'>
+    <div class="form-container">
+        <h2 class='title'>Let's connect...</h2>
+        <form action="/contact" method="POST">
+            {{ form.csrf_token }}
+            <div class="field">
+                <!-- <label class="label" for="firstName">First Name:</label> -->
+                {{ form.firstName.label(class_='label') }}
+                <div class="control">
+                    <!-- <input class="input" type="text" id="firstName" name="firstName"/> -->
+                    {{ form.firstName(class_='input') }}
+                </div>
+                <!-- {% if form.firstName.errors %}
+                    <ul class="errors"> 
+                        {% for error in form.firstName.errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %} -->
+            </div>
+            <div class="field">
+                <!-- <label class="label" for="lastName">Last Name:</label> -->
+                {{ form.lastName.label(class_='label')}}
+                <div class="control">
+                    <!-- <input class="input" type="text" id="lastName" name="lastName"/> -->
+                    {{ form.lastName(class_='input') }}
+                </div>
+            </div>
+            <div class="field">
+                <!-- <label class="label" for="emailAddress">Email Address:</label> -->
+                {{ form.emailAddress.label(class_='label') }}
+                <div class="control">
+                    <!-- <input class="input" type="email" id="emailAddress" name="emailAddress"/> -->
+                    {{ form.emailAddress(class_='input') }}
+                </div>
+                {% if form.emailAddress.errors %}
+                    <ul class="errors"> 
+                        {% for error in form.emailAddress.errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+            <div class="field">
+                <!-- <label class="label" for="emailMessage">Your Message:</label> -->
+                {{ form.messageBody.label(class_='label') }}
+                <div class="control">
+                    <!-- <textarea class="textarea" id="emailMessage" name="emailMessage"></textarea> -->
+                    {{ form.messageBody(class_='textarea') }}
+                </div>
+                {% if form.messageBody.errors %}
+                <ul class="errors">
+                    {% for error in form.messageBody.errors %}
+                        <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </div>
+            <!-- <button type="submit" class="button is-primary is-fullwidth is-medium">Send</button> -->
+            {{ form.recaptcha }}
+            {{ form.submit(class_='button is-primary is-medium') }}
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+{% block script %}
+{% endblock %}
