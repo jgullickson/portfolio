@@ -23,8 +23,6 @@ def smtpDebugServer(msg):
 
 def sendMessageWithSMTPSSL(msg):
     with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
-        # print(EMAIL_ADDRESS)
-        # print(EMAIL_PASSWORD)
         smtp.login(EMAIL_ADDRESS, EMAIL_PASSWORD)
         smtp.send_message(msg)
 
