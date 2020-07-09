@@ -5,9 +5,7 @@ from email_utils import buildMessage, sendMessageWithSMTPSSL
 import os
 from dotenv import load_dotenv
 
-APP_ROOT = os.path.join(os.path.dirname(__file__), "..")
-dotenv_path = os.path.join(APP_ROOT, '.env')
-load_dotenv(dotenv_path)
+load_dotenv()
 
 class ContactForm(FlaskForm):
     firstName = StringField('First Name', [DataRequired()])
@@ -17,13 +15,13 @@ class ContactForm(FlaskForm):
     submit = SubmitField()
 
 def handleContactForm(form):
-    # options = {
-    #     'to': os.getenv('DEFAULT_RECIPIENT'),
-    #     'subject': os.getenv('DEFAULT_SUBJECTLINE')
-    # }
     options = {
-        'to': os.environ.get('DEFAULT_RECIPIENT'),
-        'subject': os.environ.get('DEFAULT_SUBJECTLINE')
+        'to': os.getenv('DEFAULT_RECIPIENT'),
+        'subject': os.getenv('DEFAULT_SUBJECTLINE')
     }
+    # options = {
+    #     'to': os.environ.get('DEFAULT_RECIPIENT'),
+    #     'subject': os.environ.get('DEFAULT_SUBJECTLINE')
+    # }
     message = buildMessage(form, options)
     sendMessageWithSMTPSSL(message)
