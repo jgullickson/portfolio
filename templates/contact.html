@@ -1,43 +1,40 @@
 {% extends 'base.html' %}
 
 {% block head %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/contact.scss.css') }}">
 {% endblock %}
 
 {% block body %}
 <div class='container'>
     <div class="form-container">
-        <h2 class='title'>Let's connect...</h2>
+        <div class="level">
+            <div class="level-left">
+                <div class="level-item">
+                    <h2 class='title is-size-3'>Let's connect</h2>
+                </div>
+                <div class="level-item">
+                    <span class="icon level-item is-size-3"><i class="far fa-comment"></i></span>
+                </div>
+            </div>
+            <div class="level-right"></div>
+        </div>
         <form action="/contact" method="POST">
             {{ form.csrf_token }}
-            <div class="field">
-                <!-- <label class="label" for="firstName">First Name:</label> -->
-                {{ form.firstName.label(class_='label') }}
-                <div class="control">
-                    <!-- <input class="input" type="text" id="firstName" name="firstName"/> -->
-                    {{ form.firstName(class_='input') }}
+                <div class="field">
+                    {{ form.name.label(class_='label') }}
+                    <div class="control has-icons-left">
+                        <span class="icon is-left">
+                            <i class="fas fa-user"></i>
+                        </span>
+                        {{ form.name(class_='input') }}
+                    </div>
                 </div>
-                <!-- {% if form.firstName.errors %}
-                    <ul class="errors"> 
-                        {% for error in form.firstName.errors %}
-                            <li>{{ error }}</li>
-                        {% endfor %}
-                    </ul>
-                {% endif %} -->
-            </div>
             <div class="field">
-                <!-- <label class="label" for="lastName">Last Name:</label> -->
-                {{ form.lastName.label(class_='label')}}
-                <div class="control">
-                    <!-- <input class="input" type="text" id="lastName" name="lastName"/> -->
-                    {{ form.lastName(class_='input') }}
-                </div>
-            </div>
-            <div class="field">
-                <!-- <label class="label" for="emailAddress">Email Address:</label> -->
                 {{ form.emailAddress.label(class_='label') }}
-                <div class="control">
-                    <!-- <input class="input" type="email" id="emailAddress" name="emailAddress"/> -->
+                <div class="control has-icons-left">
+                    <span class="icon is-left">
+                        <i class="fas fa-envelope"></i>
+                    </span>
                     {{ form.emailAddress(class_='input') }}
                 </div>
                 {% if form.emailAddress.errors %}
@@ -49,11 +46,9 @@
                 {% endif %}
             </div>
             <div class="field">
-                <!-- <label class="label" for="emailMessage">Your Message:</label> -->
                 {{ form.messageBody.label(class_='label') }}
                 <div class="control">
-                    <!-- <textarea class="textarea" id="emailMessage" name="emailMessage"></textarea> -->
-                    {{ form.messageBody(class_='textarea') }}
+                    {{ form.messageBody(class_='textarea icon-textarea') }}
                 </div>
                 {% if form.messageBody.errors %}
                 <ul class="errors">

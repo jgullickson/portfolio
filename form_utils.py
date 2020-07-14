@@ -8,8 +8,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 class ContactForm(FlaskForm):
-    firstName = StringField('First Name', [DataRequired()])
-    lastName = StringField('Last Name', [DataRequired()])
+    name = StringField('Name', [DataRequired()])
+    # firstName = StringField('First Name', [DataRequired()])
+    # lastName = StringField('Last Name', [DataRequired()])
     emailAddress = StringField('Email', [DataRequired(), Email(message=('Please enter a valid email address.'))])
     messageBody = TextAreaField('Message', [DataRequired(), Length(min=4, message=('Your message is too short!'))])
     submit = SubmitField()

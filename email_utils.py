@@ -32,7 +32,7 @@ def buildMessage(msg, opt):
     message['From'] = EMAIL_ADDRESS
     message['To'] = opt['to']
     message_content = f"""
-        Sender name: {msg['firstName']} {msg['lastName']}
+        Sender name: {msg['name']}
         Sender email: {msg['emailAddress']}
         Message: {msg['messageBody']}
     """

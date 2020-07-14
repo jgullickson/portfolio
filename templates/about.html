@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/about.scss.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <div class="columns is-centered is-multiline">
+        <div class="column is-12">
+            <div class="headshot-container">
+                <img class="is-rounded" src="{{ url_for('static', filename='img/jtg.jpg') }}" alt="head shot of James Gullickson">
+            </div>
+        </div>
+        <div class="column is-12">
+            <div class="about-text-content">
+                <h1 class="title">James Gullickson</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio neque reprehenderit error fugit praesentium placeat nam minus enim laboriosam, id cupiditate veniam nisi voluptas numquam temporibus dignissimos asperiores voluptatibus! Fugiat.</p>
+                <a href="/contact" class="button is-primary mt-5 is-medium">Contact me</a>
+            </div>
+        </div>
+        <!-- <div class="column is-12">
+            <div class="about-text-content">
+                <h2 class="title">Placeholder: Skills / Tech Stack</h2>
+                <ul>
+                    <li>JavaScript</li>
+                    <li>Sass / CSS</li>
+                    <li>Python / Flask</li>
+                </ul>
+                <a href="{{ url_for('static', filename='pdf/James_Gullickson_Resume.pdf')}}" class="button is-primary" download>
+                <span class="icon">
+                    <i class="fas fa-download"></i>
+                </span>
+                <span class="">Download my resume</span>
+            </a>
+            </div>
+        </div>
+        <div class="column is-12">
+            <div class="about-text-content">
+                <h2 class="title">Links to Github, LinkedIn, Etc</h2>
+                <div class="level">
+                    <div class="level-left"></div>
+                    <div class="level-item">
+                        <span class="icon">
+                            <i class="fab fa-github"></i>
+                        </span>
+                        <span class="icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </span>
+                        <span class="icon">
+                            <i class="fab fa-medium-m"></i>
+                        </span>
+                    </div>
+                    <div class="level-right"></div>
+                </div>
+            </div>
+        </div> -->
+    </div>
+</div>
+
+{% endblock %}
+
+{% block script %}
+{% endblock %}

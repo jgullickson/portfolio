@@ -3,13 +3,19 @@ from os import path, getcwd
 from flask import Flask, render_template, request, redirect, url_for
 from form_utils import ContactForm, handleContactForm
 from flask_wtf.csrf import CSRFProtect
-from dotenv import load_dotenv
 
+from sassutils.wsgi import SassMiddleware;
+
+from dotenv import load_dotenv
 load_dotenv()
 
 app = Flask(__name__)
 app.secret_key = os.getenv('APP_SECRET_KEY')
 # app.secret_key = os.environ.get('APP_SECRET_KEY')
+
+app.wsgi_app = SassMiddleware(app.wsgi_app, {
+    'server': ('static/sass', 'static/css', '/static/css')
+})
 
 csrf = CSRFProtect()
 csrf.init_app(app)
@@ -22,6 +28,10 @@ def index():
 @app.route('/projects')
 def projects():
     return render_template('projects.html')
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
 
 @app.route('/success')
 def success():

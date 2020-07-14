@@ -1,0 +1,70 @@
+.tech-list {
+    margin: 0.25em 0;
+
+    span {
+        font-weight: bold;
+
+        &:not(:last-child):after {
+            content: '|';
+            font-weight: normal;
+            display: inline-block;
+            margin: 0 0.5em;
+        }
+    }
+
+    // span:not(:first-child){
+    //     margin-left: 0.5em;
+    // }
+}
+
+.source-link {
+    margin: 0.25em 0;
+}
+
+.project-description {
+    // text-align: left;
+}
+
+.project-preview {
+    position: relative;
+    height: 300px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: #353535;
+
+    &::before {
+        border-radius: 10px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        content: "";
+        // background: url('../img/hero2.jpg');
+        // background-position: left;
+        // background-size: cover;
+        // background-repeat: no-repeat;
+    }
+}
+
+.project-container {
+    padding: 2.5em;
+}
+
+#professional, #personal {
+    h2 {
+        width: 500px;
+        margin: 1.5em auto;
+        text-align: center;
+        padding: 0.5em;
+        border-bottom: 1px solid rgb(228, 11, 11);
+    }
+}
+
+#professional, #personal {
+    div.columns{
+        background-color: whitesmoke;
+        padding: 1em;
+        border-radius: 10px;
+    }
+}
