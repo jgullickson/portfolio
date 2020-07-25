@@ -1,0 +1,96 @@
+
+@import 'colors.scss';
+
+
+// $white: hsl(0, 0%, 100%);
+// $white-bis:	hsl(0, 0%, 98%);
+// $white-ter:	hsl(0, 0%, 96%);
+// $black:	hsl(0, 0%, 4%);
+// $black-bis:	hsl(0, 0%, 7%);
+// $black-ter: hsl(0, 0%, 14%);
+
+// color scheme
+// $scheme-main:	$white;
+// $scheme-main-bis: $white-bis;
+// $scheme-main-ter: $white-ter;
+// $scheme-invert: $black;
+// $scheme-invert-bis: $black-bis;
+// $scheme-invert-ter: $black-ter;
+
+// $tabs-border-bottom-color: $border !default
+$tabs-border-bottom-color: rgba(211, 211, 211, 0.37);
+// $tabs-border-bottom-style: solid !default
+// $tabs-border-bottom-width: 1px !default
+// $tabs-link-color: $text !default
+// $tabs-link-hover-border-bottom-color: $text-strong !default
+// $tabs-link-hover-color: $text-strong !default
+$tabs-link-active-border-bottom-color: transparent;
+// $tabs-link-active-color: $link !default
+// $tabs-link-padding: 0.5em 1em !default
+
+// $tabs-boxed-link-radius: $radius !default
+// $tabs-boxed-link-hover-background-color: $background !default
+$tabs-boxed-link-hover-border-bottom-color: transparent;
+
+// $tabs-boxed-link-active-background-color: $scheme-main !default
+// $tabs-boxed-link-active-border-color: $border !default
+// $tabs-boxed-link-active-border-bottom-color: transparent !default
+
+// $tabs-toggle-link-border-color: $border !default
+// $tabs-toggle-link-border-style: solid !default
+// $tabs-toggle-link-border-width: 1px !default
+// $tabs-toggle-link-hover-background-color: $background !default
+$tabs-toggle-link-hover-border-color: transparent;
+// $tabs-toggle-link-radius: $radius !default
+$tabs-toggle-link-active-background-color: transparent;
+// $tabs-toggle-link-active-border-color: $link !default
+// $tabs-toggle-link-active-color: $link-invert !default
+
+// navbar
+$navbar-item-hover-color: white;
+$navbar-item-hover-background-color: $primary;
+
+@font-face {
+    src: url('../fonts/Ubuntu/Ubuntu-Light.ttf');
+    font-family: 'Ubuntu'
+}
+
+// font
+$family-primary: 'Ubuntu', sans-serif;
+// $family-secondary: 
+// $family-code:
+
+// tabs
+$tabs-link-active-color: white;
+
+// $text: white;
+
+$radius: 0px;
+
+
+@import '../bulma-0.9.0/bulma.sass';
+
+#home-tab {
+    &:hover {
+        background-color: $primary;
+        color: white;
+    }
+}
+
+a.navbar-item.is-active, 
+.navbar-link.is-active 
+ {
+    &:focus, &:hover {
+        background-color: $primary;
+        color: white;
+    }
+
+    &:not(:focus), &:not(:hover){
+        border-bottom: 4px solid $primary;
+    }
+}
+
+body, html {
+    background-color: rgb(21, 21, 24);
+    color: white;
+}

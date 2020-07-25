@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.scss.css') }}">
+{% endblock %}
+
+{% block body %}
+<section class="hero is-fullheight-with-navbar index-hero">
+    <div class="hero-body index-text-content">
+        <div class="container">
+            <h1 class='title has-text-white'><span>James</span> <span>Gullickson</span></h1>
+            <h2 class="subtitle has-text-white">Full-Stack Software&nbsp;Developer</h2>
+            <a class="button is-primary cta" href='/projects'>View my work</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block script %}
+{% endblock %}

@@ -1,0 +1,211 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/projects.scss.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+
+    <div class="tabs">
+        <ul>
+            <li class="tab-link is-active" id="tab-link-0"><a onclick="selectTab(0)">Professional</a></li>
+            <li class="tab-link" id="tab-link-1"><a onclick="selectTab(1)">Personal</a></li>
+        </ul>
+    </div>
+
+    <div id="tab-0" class="tab is-active">
+        <h2 class="title">Professional Projects</h2>
+        <div class="columns is-multiline">
+            <div class="column is-12 project-container">
+                <div class="columns is-multiline">
+                    <div class="column is-7">
+                        <div class="project-description">
+                            <h3 class="title">Cognitive Training Electron Application</h3>
+                            <p class="subtitle">University of Minnesota, Laboratory for NeuroPsychiatric Imaging</p>
+                            <p>I designed and implemented core features for the lab's principal research application, used to deliever cognitive training and transcranial direct current (brain) stimulation. My contributions included a Zoom&reg Oauth and API integration, a custom auto-update module for the integrated Python bluetooth serial server, and an automated build and distribution system.</p>
+                            <div class="tech-list">
+                                <span>Electron</span>
+                                <span>Node.js</span>
+                                <span>Gulp</span>
+                                <span>Python</span>
+                            </div>
+                            <a href="https://github.com/jgullickson/taskflow-electron-demo" class="source-link button is-success">
+                                <span class="icon">
+                                    <i class="fab fa-github"></i>
+                                </span>
+                                <span>View source</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="column is-5">
+                        <div class="project-preview"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="column is-12">
+                <div class="columns is-multiline project-container">
+                    <div class="column is-7">
+                        <div class="project-description">
+                            <h3 class="title">Research Administrator Single-Page Application</h3>
+                            <p class="subtitle">University of Minnesota, Laboratory for NeuroPsychiatric Imaging</p>
+                            <p>Our lab's interface for managing research participants and study sessions was due for an upgrade. I refactored individual MVC controllers into a rich single-page application using ASP.NET's SpaServices.Extensions and Vue CLI.</p>
+                            <div class="tech-list">
+                                <span>Vue.js</span>
+                                <span>Bulma</span>
+                                <span>Sass</span>
+                                <span>ASP.NET</span>
+                            </div>
+                            <a href="https://github.com/jgullickson/taskflow-electron-demo" class="source-link button is-success">
+                                <span class="icon">
+                                    <i class="fab fa-github"></i>
+                                </span>
+                                <span>View source</span>
+                            </a>
+                        </div>  
+                    </div>
+                    <div class="column is-5">
+                        <div class="project-preview"></div>
+                    </div>
+                    <!-- <div class="column is-5">
+                        <div class="project-preview"></div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="column is-12">
+                <div class="columns is-multiline project-container">
+                    <div class="column is-7">
+                        <div class="project-description">
+                            <h3 class="title">Notification Calendar</h3>
+                            <p class="subtitle">University of Minnesota, Laboratory for NeuroPsychiatric Imaging</p>
+                            <p>Research staff at the University of Minnesota needed a system to create and manage notifications for research participants. I created a calendar-based interface using React </p>
+                            <div class="tech-list">
+                                <span>React</span>
+                                <span>Redux</span>
+                                <span>Bulma</span>
+                            </div>
+                            <a href="https://github.com/jgullickson/taskflow-electron-demo" class="source-link button is-success">
+                                <span class="icon">
+                                    <i class="fab fa-github"></i>
+                                </span>
+                                <span>View source</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="column is-5">
+                        <div class="project-preview"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="tab-1" class="tab">
+        <h2 class="title">Personal Projects</h2>
+                <div class="columns is-multiline">
+            <div class="column is-12 project-container">
+                <div class="columns is-multiline">
+                    <div class="column is-7">
+                        <div class="project-description">
+                            <h3 class="title">GeoHop - Brewery Mapping Application</h3>
+                            <p class="subtitle">JANUARY 2020</p>
+                            <p>I designed and implemented core features for the lab's principal research application, used to deliever cognitive training and transcranial direct current (brain) stimulation. My contributions included a Zoom&reg Oauth and API integration, a custom auto-update module for the integrated Python bluetooth serial server, and an automated build and distribution system.</p>
+                            <div class="tech-list">
+                                <span>React</span>
+                                <span>Redux</span>
+                                <span>Leaflet.js</span>
+                            </div>
+                            <a href="https://github.com/jgullickson/brew_locator" class="source-link button is-success">
+                                <span class="icon">
+                                    <i class="fab fa-github"></i>
+                                </span>
+                                <span>View source</span>
+                            </a>
+                            <a href="https://geohop.herokuapp.com/" class="source-link button is-info">
+                                <span class="icon">
+                                    <i class="fas fa-play"></i>
+                                </span>
+                                <span>Live demo</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="column is-5">
+                        <div class="project-preview"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="column is-12">
+                <div class="columns is-multiline project-container">
+                    <div class="column is-7">
+                        <div class="project-description">
+                            <h3 class="title">Clear Budget</h3>
+                            <p class="subtitle">JULY 2020</p>
+                            <p>A straightforward budget application that allows users to log and categorize transactions, create budgets and to view visualizations of budgets and spending categories.</p>
+                            <div class="tech-list">
+                                <span>Vue.js</span>
+                                <span>MongoDB</span>
+                            </div>
+                            <a href="https://github.com/jgullickson/vue-budget" class="source-link button is-success">
+                                <span class="icon">
+                                    <i class="fab fa-github"></i>
+                                </span>
+                                <span>View source</span>
+                            </a>
+                            <a href="https://jgullickson.github.io/vue-budget" class="source-link button is-info">
+                                <span class="icon">
+                                    <i class="fas fa-play"></i>
+                                </span>
+                                <span>Live demo</span>
+                            </a>
+                        </div>  
+                    </div>
+                    <div class="column is-5">
+                        <div class="project-preview"></div>
+                    </div>
+                    <!-- <div class="column is-5">
+                        <div class="project-preview"></div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="column is-12">
+                <div class="columns is-multiline project-container">
+                    <div class="column is-7">
+                        <div class="project-description">
+                            <h3 class="title">Weather Wizard</h3>
+                            <p class="subtitle">MAY 2020</p>
+                            <p>Leverages data from an open-source weather API to display current conditions and forcast information for either a user's geolocation or a manually specified location.</p>
+                            <div class="tech-list">
+                                <span>React</span>
+                                <span>Redux</span>
+                                <span>Materialize.css</span>
+                            </div>
+                            <a href="https://github.com/jgullickson/weatherApp" class="source-link button is-success">
+                                <span class="icon">
+                                    <i class="fab fa-github"></i>
+                                </span>
+                                <span>View source</span>
+                            </a>
+                            <a href="https://weather-wizard-app.herokuapp.com/" class="source-link button is-info">
+                                <span class="icon">
+                                    <i class="fas fa-play"></i>
+                                </span>
+                                <span>Live demo</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="column is-5">
+                        <div class="project-preview"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+{% endblock %}
+
+{% block script %}
+<script src="{{ url_for('static', filename='/scripts/projects.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" class="has-navbar-fixed-top">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gullickson Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.scss.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fontawesome-free-5.13.1-web/css/all.css') }}">
+    <!-- <link rel="stylesheet" href=""> -->
+    {% block head %}{% endblock %}
+</head>
+
+<body>
+    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a href="/" class="navbar-item" id="home-tab">
+                <div style="position: relative;">
+                    <span>Home</span>
+                    <!-- <span class="icon"><i class="fas fa-campground"></i></span> -->
+                </div>
+            </a>
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div class="navbar-menu" id="navMenu">
+            <div class="navbar-start">
+                <a href="/projects" class="navbar-item my-nav-item" id="projects-tab">
+                    <div style="position: relative;">
+                        <span>Projects</span>
+                        <!-- <span class="icon"><i class="fas fa-code"></i></span> -->
+                    </div>
+                </a>
+                <a href="/about" class="navbar-item my-nav-item" id="about-tab">
+                        <div style="position: relative;">
+                            <span>About</span>
+                        <!-- <span class="icon"><i class="fas fa-info-circle"></i></span> -->
+                    </div>
+                </a>
+                <a href="/contact" class="navbar-item my-nav-item" id="contact-tab">
+                    <div style="position: relative;">
+                        <span>Contact</span>
+                        <!-- <span class="icon"><i class="fas fa-comment"></i></span> -->
+                    </div>
+                </a>
+            </div>
+            <div class="navbar-end"></div>
+        </div>
+    </nav>
+        {% block body %}{% endblock %}
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // when navbar-burger is clicked, toggle class 'is-active' on both the navbar-burger and the navbar-menu it targets
+        const burgerMenu = document.getElementsByClassName('navbar-burger').item(0);
+        const targetMenu = document.getElementById(burgerMenu.dataset.target);
+
+        burgerMenu.addEventListener('click', () => {
+            burgerMenu.classList.toggle('is-active');
+            targetMenu.classList.toggle('is-active');
+        })
+    });
+
+    window.onload = function() {
+        let route;
+        if (location.pathname === '/'){
+            route = 'home';
+        } else {
+            route = location.pathname.slice(1);
+        }
+        document.getElementById(`${route}-tab`).classList.add('is-active');
+    }
+</script>
+    {% block script %}{% endblock %}
+</html>

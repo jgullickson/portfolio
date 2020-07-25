@@ -1,0 +1,32 @@
+form, h2, .level {
+    max-width: 500px;
+    display: block;
+    margin: 0 auto;
+}
+
+.form-container {
+    margin: 2em auto;
+    padding: 0 1em;
+}
+
+form {
+    background-color: whitesmoke;
+    padding: 2em;
+    border-radius: 10px;
+}
+
+.contact-header {
+    flex-wrap: nowrap;
+
+    h2 {
+        color: white;
+    }
+}
+
+// .contact-header-text {
+
+// }
+
+.contact-header-icon {
+    margin: 0.5em;
+}
