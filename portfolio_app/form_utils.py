@@ -1,7 +1,7 @@
 from flask_wtf import FlaskForm, RecaptchaField
 from wtforms import StringField, TextField, TextAreaField, SubmitField
 from wtforms.validators import DataRequired, Length, Email
-from portfolio_pkg.email_utils import buildMessage, sendMessageWithSMTPSSL
+from portfolio_app.email_utils import buildMessage, sendMessageWithSMTPSSL
 import os
 from dotenv import load_dotenv
 

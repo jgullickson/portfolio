@@ -1,6 +1,6 @@
-from portfolio_pkg import app
+from portfolio_app import app
 from flask import Flask, render_template, request, redirect, url_for
-from portfolio_pkg.form_utils import ContactForm, handleContactForm
+from portfolio_app.form_utils import ContactForm, handleContactForm
 
 
 # ROUTES
@@ -8,19 +8,19 @@ from portfolio_pkg.form_utils import ContactForm, handleContactForm
 def index():
     return render_template('index.html')
 
-@app.route('/projects')
+@app.route('/projects/')
 def projects():
     return render_template('projects.html')
 
-@app.route('/about')
+@app.route('/about/')
 def about():
     return render_template('about.html')
 
-@app.route('/success')
+@app.route('/success/')
 def success():
     return render_template(('success.html'))
 
-@app.route('/contact', methods=['GET', 'POST'])
+@app.route('/contact/', methods=['GET', 'POST'])
 def contact():
     form = ContactForm()
     if form.validate_on_submit():

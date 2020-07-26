@@ -21,10 +21,6 @@ def create_app(test_config=None):
     app.wsgi_app = SassMiddleware(app.wsgi_app, {
     __name__: ('static/sass', 'static/css', '/static/css')
     })
-    
-    # @app.route('/')
-    # def index():
-    #     return 'behold, a new structure'
 
     csrf = CSRFProtect()
     csrf.init_app(app)
@@ -33,4 +29,4 @@ def create_app(test_config=None):
 
 app = create_app()
 
-import portfolio_pkg.views
+import portfolio_app.views

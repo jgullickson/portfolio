@@ -1,14 +1,13 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='portfolio_pkg',
-    # packages=['portfolio_pkg'],
+    name='portfolio_app',
     packages=find_packages(),
     include_package_data=True,
     zip_safe=False,
     setup_requires=['libsass >= 0.6.0'],
     sass_manifests={
-        'portfolio_pkg': ('static/sass', 'static/css', '/static/css')
+        'portfolio_app': ('static/sass', 'static/css', '/static/css')
     },
     install_requires=[
         'click>=7.1.2',
