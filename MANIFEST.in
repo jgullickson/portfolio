@@ -1,2 +1,3 @@
 recursive-include portfolio_app/static
 recursive-include portfolio_app/templates
+recursive-include portfolio_app/favicons
