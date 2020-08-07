@@ -23,14 +23,14 @@
                         <div class="project-description">
                             <h3 class="title">Cognitive Training Electron Application</h3>
                             <p class="subtitle">University of Minnesota, Laboratory for NeuroPsychiatric Imaging</p>
-                            <p>I designed and implemented core features for the lab's principal research application, used to deliever cognitive training and transcranial direct current (brain) stimulation. My contributions included a Zoom&reg Oauth and API integration, a custom auto-update module for the integrated Python bluetooth serial server, and an automated build and distribution system.</p>
+                            <p>I designed and implemented core features for the lab's principal research application, used to deliver cognitive training and transcranial direct current (brain) stimulation. My contributions included a Zoom&reg Oauth and API integration, a custom auto-update module for the integrated Python bluetooth serial server, and an automated build and distribution system.</p>
                             <div class="tech-list">
                                 <span>Electron</span>
                                 <span>Node.js</span>
                                 <span>Gulp</span>
                                 <span>Python</span>
                             </div>
-                            <a href="https://github.com/jgullickson/taskflow-electron-demo" class="source-link button is-success">
+                            <a href="https://github.com/jgullickson/taskflow-electron-app-samples" class="source-link button is-success">
                                 <span class="icon">
                                     <i class="fab fa-github"></i>
                                 </span>
@@ -39,7 +39,7 @@
                         </div>
                     </div>
                     <div class="column is-5">
-                        <div class="project-preview"></div>
+                        <img class="preview-img" src="{{url_for('static', filename='img/screenshots/electron-app.png')}}" alt="screenshot of Taskflow Electron application showing Zoom login modal.">
                     </div>
                 </div>
             </div>
@@ -47,16 +47,16 @@
                 <div class="columns is-multiline project-container">
                     <div class="column is-7">
                         <div class="project-description">
-                            <h3 class="title">Research Administrator Single-Page Application</h3>
+                            <h3 class="title">Research Admin Single-Page Application</h3>
                             <p class="subtitle">University of Minnesota, Laboratory for NeuroPsychiatric Imaging</p>
-                            <p>Our lab's interface for managing research participants and study sessions was due for an upgrade. I refactored individual MVC controllers into a rich single-page application using ASP.NET's SpaServices.Extensions and Vue CLI.</p>
+                            <p>I refactored individual MVC controllers into a rich single-page application using ASP.NET's SpaServices.Extensions and Vue CLI.</p>
                             <div class="tech-list">
                                 <span>Vue.js</span>
                                 <span>Bulma</span>
                                 <span>Sass</span>
                                 <span>ASP.NET</span>
                             </div>
-                            <a href="https://github.com/jgullickson/taskflow-electron-demo" class="source-link button is-success">
+                            <a href="https://github.com/jgullickson/taskflow-spa-demo" class="source-link button is-success">
                                 <span class="icon">
                                     <i class="fab fa-github"></i>
                                 </span>
@@ -78,13 +78,13 @@
                         <div class="project-description">
                             <h3 class="title">Notification Calendar</h3>
                             <p class="subtitle">University of Minnesota, Laboratory for NeuroPsychiatric Imaging</p>
-                            <p>Research staff at the University of Minnesota needed a system to create and manage notifications for research participants. I created a calendar-based interface using React </p>
+                            <p>I created a calendar-based interface for lab staff to manage notifications to participants.</p>
                             <div class="tech-list">
                                 <span>React</span>
                                 <span>Redux</span>
                                 <span>Bulma</span>
                             </div>
-                            <a href="https://github.com/jgullickson/taskflow-electron-demo" class="source-link button is-success">
+                            <a href="https://github.com/jgullickson/taskflow-notify-demo" class="source-link button is-success">
                                 <span class="icon">
                                     <i class="fab fa-github"></i>
                                 </span>
@@ -109,12 +109,14 @@
                     <div class="column is-7">
                         <div class="project-description">
                             <h3 class="title">GeoHop - Brewery Mapping Application</h3>
-                            <p class="subtitle">JANUARY 2020</p>
-                            <p>I designed and implemented core features for the lab's principal research application, used to deliever cognitive training and transcranial direct current (brain) stimulation. My contributions included a Zoom&reg Oauth and API integration, a custom auto-update module for the integrated Python bluetooth serial server, and an automated build and distribution system.</p>
+                            <!-- <p class="subtitle">JANUARY 2020</p> -->
+                            <p>A map-based application which consumes a third-party brewery API and allows users to search and browse breweries by state, nearby (geolocation), and by name. I used Mapbox reverse geocoding API and Turf.js to overcome limitations with the third-party API in order to implement the geolocation feature.</p>
                             <div class="tech-list">
                                 <span>React</span>
                                 <span>Redux</span>
                                 <span>Leaflet.js</span>
+                                <span>Mapbox</span>
+                                <span>Turf.js</span>
                             </div>
                             <a href="https://github.com/jgullickson/brew_locator" class="source-link button is-success">
                                 <span class="icon">
@@ -131,7 +133,7 @@
                         </div>
                     </div>
                     <div class="column is-5">
-                        <div class="project-preview"></div>
+                        <img class="preview-img" src="{{url_for('static', filename='img/screenshots/geohop.png')}}" alt="screenshot of application displaying a map of breweries by location">
                     </div>
                 </div>
             </div>
@@ -140,7 +142,7 @@
                     <div class="column is-7">
                         <div class="project-description">
                             <h3 class="title">Clear Budget</h3>
-                            <p class="subtitle">JULY 2020</p>
+                            <!-- <p class="subtitle">JULY 2020</p> -->
                             <p>A straightforward budget application that allows users to log and categorize transactions, create budgets and to view visualizations of budgets and spending categories.</p>
                             <div class="tech-list">
                                 <span>Vue.js</span>
@@ -161,11 +163,8 @@
                         </div>  
                     </div>
                     <div class="column is-5">
-                        <div class="project-preview"></div>
+                        <img class="preview-img" src="{{url_for('static', filename='img/screenshots/budget.png')}}" alt="screenshot of budget application">
                     </div>
-                    <!-- <div class="column is-5">
-                        <div class="project-preview"></div>
-                    </div> -->
                 </div>
             </div>
             <div class="column is-12">
@@ -173,8 +172,8 @@
                     <div class="column is-7">
                         <div class="project-description">
                             <h3 class="title">Weather Wizard</h3>
-                            <p class="subtitle">MAY 2020</p>
-                            <p>Leverages data from an open-source weather API to display current conditions and forcast information for either a user's geolocation or a manually specified location.</p>
+                            <!-- <p class="subtitle">MAY 2020</p> -->
+                            <p>Consumes data from an open-source weather API to display current conditions and forcast information for either a user's geolocation or a manually specified location.</p>
                             <div class="tech-list">
                                 <span>React</span>
                                 <span>Redux</span>
@@ -195,7 +194,7 @@
                         </div>
                     </div>
                     <div class="column is-5">
-                        <div class="project-preview"></div>
+                        <img class="preview-img" src="{{url_for('static', filename='img/screenshots/weather.png')}}" alt="">
                     </div>
                 </div>
             </div>

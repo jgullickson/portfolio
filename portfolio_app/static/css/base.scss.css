@@ -7413,6 +7413,11 @@ a.navbar-item.is-active:not(:focus), a.navbar-item.is-active:not(:hover),
 .navbar-link.is-active:not(:hover) {
   border-bottom: 4px solid #3d48da; }
 
+#navbar-logo {
+  height: 50px; }
+
 body, html {
   background-color: #151518;
   color: white; }
+
+/*# sourceMappingURL=base.scss.css.map */

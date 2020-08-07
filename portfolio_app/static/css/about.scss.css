@@ -8,12 +8,15 @@
     border-radius: 50%;
     object-fit: cover; }
 
-.about-text-content {
-  text-align: center;
-  max-width: 300px; }
+.social-links a {
+  color: white; }
+  .social-links a:hover {
+    color: #3d48da; }
 
 .about-text-content, .headshot-container {
   margin: auto; }
 
 h1 {
   color: white !important; }
+
+/*# sourceMappingURL=about.scss.css.map */

@@ -23,26 +23,11 @@
     // text-align: left;
 }
 
-.project-preview {
-    position: relative;
+.preview-img {
     height: 300px;
-    width: 100%;
-    // border-radius: 10px;
-    background-color: #353535;
-
-    &::before {
-        border-radius: 10px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        content: "";
-        // background: url('../img/hero2.jpg');
-        // background-position: left;
-        // background-size: cover;
-        // background-repeat: no-repeat;
-    }
+    width: 500px;
+    object-fit: cover;
+    object-position: left top;
 }
 
 .project-container {

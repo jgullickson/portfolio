@@ -11,19 +11,11 @@
 .source-link {
   margin: 0.25em 0; }
 
-.project-preview {
-  position: relative;
+.preview-img {
   height: 300px;
-  width: 100%;
-  background-color: #353535; }
-  .project-preview::before {
-    border-radius: 10px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    content: ""; }
+  width: 500px;
+  object-fit: cover;
+  object-position: left top; }
 
 #professional h2, #personal h2 {
   width: 500px;
@@ -57,3 +49,5 @@
 
 .tab.is-active {
   display: block; }
+
+/*# sourceMappingURL=projects.scss.css.map */
