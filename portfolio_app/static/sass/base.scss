@@ -52,7 +52,8 @@ $navbar-item-hover-background-color: $primary;
 
 @font-face {
     src: url('../fonts/Ubuntu/Ubuntu-Light.ttf');
-    font-family: 'Ubuntu'
+    font-family: 'Ubuntu';
+    font-display: swap;
 }
 
 // font
